@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>多个窗口</title>
+	<style type="text/css">
+
+		*{margin:0;padding:0;}
+		
+		.scrollBox{
+			position: relative;
+			overflow: hidden;
+			max-height:120px;
+		}
+		.svSlider{
+			width:4px;height:100%;
+			position: absolute;
+			right:2px;top:0;
+			z-index:10;
+		}
+		/* 滑块 */
+		.svSlider .svbar{
+			position: absolute;
+			width:4px;background:#dadada;
+			cursor:pointer;
+		}
+		.scrollBoxMain {
+			position: relative;
+			left:0;right:0;
+		}
+
+		.demo {
+			width:300px;
+			margin:20px auto;
+		}
+		.demo ul li{
+			width:100%;height:30px;
+			background:#f5f7fc;
+			line-height:30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo scrollBox">
+		<!-- 滚动条样式 s -->
+		<div class="svSlider">
+	    	<div class="svbar"></div>
+	  	</div>
+		<!-- 滚动条样式 e -->
+		<div class="scrollBoxMain">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="demo scrollBox">
+		<!-- 滚动条样式 s -->
+		<div class="svSlider">
+	    	<div class="svbar"></div>
+	  	</div>
+		<!-- 滚动条样式 e -->
+		<div class="scrollBoxMain">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var scrollBox = document.querySelectorAll('.scrollBox');
+			var bar = new Scrollbars(30);
+		}
+	</script>
+</body>
+</html>
